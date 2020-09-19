@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  li{
+      display: inline;
+      float: right;
+      font-size: small;
+  }
+  a {
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #dddddd;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  li a:hover {
+    background-color: #444644;
+    cursor: pointer;
+  }
+  *
+  body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+.bgimg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/w3images/profile_girl.jpg');
+  min-height: 100%;
+}

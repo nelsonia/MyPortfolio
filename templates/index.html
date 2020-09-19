@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<title>portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/styles.css">
+
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Content -->
+  <div class="w3-main w3-padding-large" style="margin-left:10%">
+
+    <!-- Menu icon to open sidebar -->
+
+
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+      <h1 class="w3-jumbo"><b>Nelson Njuguna</b></h1>
+      <p> Web Designer.</p>
+    </header>
+
+    <!-- Portfolio Section -->
+
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+      <h2>About</h2>
+      <hr class="w3-opacity">
+      <p>Nelson Njuguna is an undergraduate student at KCA University pursuing a degree in bachelor of science in
+        applied computing which takes four years to complete and am in the second year, Am passionate with web
+        development, a self taught student.
+      </p>
+      <hr>
+      <button type="button" class="btn btn-light" style="text-align: center; margin-right: 100px"><a
+          href="https://www.fuzu.com/profile/nelson-njuguna-719777">CHECK ON MY CV</a></button>
+      <hr>
+      <h3 class="w3-padding-16">My Skills</h3>
+      <p class="w3-wide">Photography</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">35%</div>
+      </div>
+      <p class="w3-wide">Web Design</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">75%</div>
+      </div>
+      <p class="w3-wide">Photoshop</p>
+      <div class="w3-light-grey">
+        <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">30%</div>
+      </div>
+      <br>
+      <hr>
+      <h1>Languages</h1>
+
+      <!--languages learnt-->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/105085099/original/41dd8d734b59b8a28144b54f03058f12cccdfa88/do-everything-related-to-python-django.png"
+              class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <!-- Contact Section -->
+      <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
+        <h2>Contact Me</h2>
+        <hr class="w3-opacity">
+
+        <div class="w3-section">
+          <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Ruiru, KE</p>
+          <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +254718248586</p>
+          <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: dvjstaciah@gmail.com</p>
+        </div>
+        <br>
+
+        <hr>
+
+
+        <p>Lets get in touch. Send me a message:</p>
+        {% if message %}
+        <p class="message">{{ message | safe }}</p>
+        {% endif %}
+        <form action="/submit" method="POST" target=""">
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name"  name="Name"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email"  name="Email"></p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" name="Subject">
+          </p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" name="Message">
+          </p>
+          <p>
+            <button class="w3-button w3-light-grey w3-padding-large" type="submit" Method="POST" value="submit">
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </p>
+        </form>
+        <!-- End Contact Section -->
+      </div>
+      <hr>
+
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+        <a href="https://www.instagram.com/ne.lsonia/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/Nelson62002025"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/in/nelson-njuguna-291769185/"><i
+            class="fa fa-linkedin w3-hover-opacity"></i></a>
+        <a href="https://github.com/nelsonia"><i class="fa fa-github 3-hover-opacity"></i></a>
+
+        <!-- End footer -->
+      </footer>
+
+      <!-- END PAGE CONTENT -->
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</html>
