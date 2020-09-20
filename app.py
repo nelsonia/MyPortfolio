@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
+# from flask_mail import Mail, Message
+
 
 app = Flask(__name__)
 
-ENV = 'prod'
+ENV = 'dev'
 
 if ENV == 'dev':
     app.debug = True
@@ -41,9 +43,34 @@ def index():
 def submit():
     if request.method == 'POST':
         Name = request.form['Name']
-        Email = request.form['Email']
         Subject = request.form['Subject']
         Message = request.form['Message']
+        Email = request.form['Email']
+
+        # message ="your feedback is well received"
+        # server = smtplib.SMTP("smtp.gmail.com" , 587)
+        # server.starttls()
+        # server.login ("dvjnelsonia@gmail.com", "")
+        # server.sendmail("dvjnelsonia@gmail.com" ,Email, message)
+        
+
+
+        # mail= Mail(app)
+
+        # app.config['MAIL_SERVER']='smtp.gmail.com'
+        # app.config['MAIL_PORT'] = 465
+        # app.config['MAIL_USERNAME'] = 'dvjstaciah@gmail.com'
+        # app.config['MAIL_PASSWORD'] = ''
+        # app.config['MAIL_USE_TLS'] = False
+        # app.config['MAIL_USE_SSL'] = True
+        # mail = Mail(app)
+
+
+        # msg = Message('Hello', sender = 'dvjstaciah@gmail.com', recipients = 'dvjstaciah@gmail.com')
+        # msg.body = "Hello Flask message sent from Flask-Mail"
+        # mail.send(msg)
+        # return "Sent"
+
         # print(customer, dealer, rating, comments)
         if Name == '' or Name == '':
             return render_template('index.html', message='Please enter required fields')
@@ -51,8 +78,8 @@ def submit():
             data = Feedbacks(Name, Email, Subject, Message)
             db.session.add(data)
             db.session.commit()
-            return render_template('index.html')
-        return render_template('index.html', message='Thank You for your Feedback')
+            return render_template('success.html')
+        return render_template('success.html', message='Thank You for your Feedback')
 
 
 if __name__ == '__main__':
