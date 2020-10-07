@@ -77,9 +77,20 @@
       </div>
       <br>
       <hr>
+      <h1>PROJECTS</h1>
+        <div class="row">
+          <div class="card">
+            <img src="https://lh3.googleusercontent.com/proxy/89LKoLzhK3zu_ur91DbqvtqzYt-JjhzNSC7HMpXhIRVJi6uaSe24NGty3l4B3HsvHkseVNt7WhMAldRtuo4lOyNnFubsDwV_0Iz8uEnfDfFiGfLqZV_H" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>EMPLOYEE REGISTER </b></h4> 
+              <p>This is a project which reduce the use of paper work with the help of a web-based form and a databse</p> 
+            </div>
+          </div>
+          
+      </div>
       <!-- Contact Section -->
       <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
-        <h2>Contact Me</h2>
+        <h2>CONTACT ME</h2>
         <hr class="w3-opacity">
 
         <div class="w3-section">
@@ -87,18 +98,19 @@
           <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +254718248586</p>
           <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: dvjstaciah@gmail.com</p>
         </div>
+
         <br>
 
         <hr>
-
 
         <p>Lets get in touch. Send me a message:</p>
         {% if message %}
         <p class="message">{{ message | safe }}</p>
         {% endif %}
         <form action="/submit" method="POST" target=""">
-          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name"  name="Name"></p>
-          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email"  name="Email"></p>
+          <p><input class=" w3-input w3-padding-16 w3-border" type="text" placeholder="Name" name="Name">
+          </p>
+          <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" name="Email"></p>
           <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Subject" name="Subject">
           </p>
           <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" name="Message">
@@ -120,6 +132,8 @@
         <a href="https://www.linkedin.com/in/nelson-njuguna-291769185/"><i
             class="fa fa-linkedin w3-hover-opacity"></i></a>
         <a href="https://github.com/nelsonia"><i class="fa fa-github 3-hover-opacity"></i></a>
+        <br>
+        <p>&copy; Nelson Njuguna</p>
 
         <!-- End footer -->
       </footer>
